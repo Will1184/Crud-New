@@ -9,10 +9,10 @@ public class Main {
     public static void main(String[] args) {
         OrdenablePaginableCrudRepository repo = new ClienteListRepository();
         //Crear Datos en la tabla
-        repo.crear(new Cliente(1,"Juan","Gomez"));
-        repo.crear(new Cliente(2,"Brandon","Guzman"));
-        repo.crear(new Cliente(3,"William","Garcia"));
-        repo.crear(new Cliente(4,"William","Garcia"));
+        repo.crear(new Cliente("Juan","Gomez"));
+        repo.crear(new Cliente("Brandon","Guzman"));
+        repo.crear(new Cliente("William","Garcia"));
+        repo.crear(new Cliente("William","Sanchez"));
 
         //Listar
         System.out.println("Lista");
@@ -28,7 +28,7 @@ public class Main {
         clientes.forEach(System.out::println);
 
         //Editar un dato
-        repo.editar(new Cliente(1,"Pedro","Gomez"));
+        repo.editar(new Cliente("Pedro","Gomez"));
         //Eliminar un dato
         repo.eliminar(2);
 

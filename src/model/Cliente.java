@@ -8,12 +8,11 @@ public class Cliente {
     private static int ultimoId;
 
     public Cliente() {
-        ultimoId++;
+        this.id=ultimoId++;
     }
 
-    public Cliente(Integer id, String nombre, String apellido) {
+    public Cliente(String nombre, String apellido) {
         this();
-        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
     }
